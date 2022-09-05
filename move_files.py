@@ -5,7 +5,7 @@ import tqdm
 import shutil
 
 
-def ordering_files(file_path:str, new_file_path:str):
+def move_file(file_path:str, new_file_path:str):
 
     fns = list(glob.glob(file_path, recursive=True))
     for file in tqdm.tqdm(fns):
@@ -17,7 +17,7 @@ def ordering_files(file_path:str, new_file_path:str):
 
 
 def main(src, dst):
-    return ordering_files(src, dst)
+    return move_file(src, dst)
 
 
 if __name__ == "__main__":
