@@ -5,7 +5,7 @@ import tqdm
 import shutil
 
 
-def move_file(file_path:str, new_file_path:str):
+def copy_file(file_path:str, new_file_path:str):
 
     fns = list(glob.glob(file_path, recursive=True))
     for file in tqdm.tqdm(fns):
